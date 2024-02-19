@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminVéhiculesController!{% endblock %}
+
+{% block body %}
+
+ 
+<div class="maincontainer {{page}}">
+   {% set pagelen = page|length %} 
+  <h1>Administration  {{page|slice(6, pagelen )|capitalize}}</h1>    
+    
+             <div class="mt-5" >
+                 {% include '/Crud/crud_vehicule/index.html.twig' %}  
+        </div>  
+   
+</div>
+{% endblock %}
+ 

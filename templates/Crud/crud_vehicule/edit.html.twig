@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Vehicule{% endblock %}
+
+{% block body %}
+<div class="maincontainer {{page}}">
+    <h1>Edit Vehicule</h1>
+
+    {{ include('Crud/crud_vehicule/_vehicule_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_admin_vehicules') }}">back to list</a> 
+
+    {{ include('Crud/crud_vehicule/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

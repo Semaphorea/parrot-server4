@@ -1,0 +1,17 @@
+{% block header %}
+<header class="grid">
+    <div id="logo" class='logo'>
+         <a href="#" alt="garage parrot">
+                {% if crud is defined %}
+                <img src="../../images/logo/logo.png" alt="logo garage parrot" />
+                {% else %}    
+                <img src="../images/logo/logo.png" alt="logo garage parrot" />
+                {% endif %}
+         </a><span class='brant'>Garage Parrot</span></div> 
+         
+  <div id='connexion' class='btn btn-danger connexion col-1  offset-8' onclick='window.location.href="/logout"'>Se Déconnecter</div>  
+
+</header>  
+
+
+{% endblock %}      

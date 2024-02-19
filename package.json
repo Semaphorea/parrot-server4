@@ -1,0 +1,23 @@
+{
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@babel/preset-env": "^7.23.8",
+        "@popperjs/core": "^2.11.8",
+        "@symfony/webpack-encore": "^4.5.0",
+        "bootstrap": "^5.3.2",
+        "initialize-css": "^1.4.0",
+        "jquery": "^3.7.1",
+        "scss": "^0.2.4",
+        "stimulus": "^3.2.2",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^5.1.4",
+        "webpack-notifier": "^1.15.0"
+    }
+}

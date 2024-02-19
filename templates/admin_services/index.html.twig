@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration Services - Garage Parrot{% endblock %}
+{% block body %}
+ 
+  
+<div class="maincontainer {{page}}">  
+      {% set pagelen = page|length %} 
+  <h1>Administration  {{page|slice(6, pagelen )|capitalize}}</h1>     
+        
+         
+            <div class="mt-5" >
+                 {% include '/Crud/crud_service/index.html.twig' %}  
+        </div>
+ 
+</div>
+{% endblock %} 

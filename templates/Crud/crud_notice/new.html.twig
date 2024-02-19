@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Notice{% endblock %}
+
+{% block body %} 
+ <div class="maincontainer {{page}}">
+    <h1>Create new Notice</h1>
+
+    {{ include('Crud/crud_notice/_form.html.twig') }}
+
+    <a href="{{ path('app_admin_avis') }}">back to list</a>
+    </div>
+{% endblock %}

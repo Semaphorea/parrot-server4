@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Administrator{% endblock %}
+
+{% block body %}
+<div class="maincontainer {{page}}">
+    <h1>Edit Administrator</h1>
+
+    {{ include('Crud/crud_administrator/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_administration') }}">back to list</a>
+
+    {{ include('Crud/crud_administrator/_delete_form.html.twig') }}   
+    </div>
+{% endblock %}  

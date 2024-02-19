@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Timetable{% endblock %}
+
+{% block body %}
+<div class="maincontainer {{page}}"> 
+    <h1>Create new Timetable</h1>
+
+    {{ include('Crud/timetable_crud/_form.html.twig') }}
+
+    <a href="{{ path('app_admin_horaires') }}">back to list</a>
+</div>  
+
+{% endblock %}

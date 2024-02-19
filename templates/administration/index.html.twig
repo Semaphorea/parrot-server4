@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+<div class="maincontainer {{page}}">  
+    <h1>Administration {{page|replace({'_':' '})|capitalize}}</h1> 
+       
+         
+            <div class="mt-5" >
+                 {% include '/Crud/crud_administrator/index.html.twig' %}  
+            </div>
+ 
+            <div class="mt-5" >
+                 {% include '/Crud/crud_employee/index.html.twig' %}    
+            </div>
+</div>
+{% endblock %} 

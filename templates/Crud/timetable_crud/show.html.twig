@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Timetable{% endblock %}
+
+{% block body %}
+<div class="maincontainer {{page}}">
+    <h1>Timetable</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ timetable.id }}</td>
+            </tr>
+            <tr>
+                <th>Day</th>
+                <td>{{ timetable.day }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ timetable.date ? timetable.date|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Timetable</th>
+                <td>{{ timetable.timetable ? timetable.timetable|join(', ') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_horaires') }}">back to list</a>
+
+    <a href="{{ path('app_timetable_crud_edit', {'id': timetable.id}) }}">edit</a>
+
+    {{ include('Crud/timetable_crud/_delete_form.html.twig') }} 
+    </div>
+{% endblock %}  

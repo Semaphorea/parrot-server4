@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Service{% endblock %}
+
+{% block body %}
+<div class="maincontainer {{page}}">
+    <h1>Create new Service</h1>
+
+    {{ include('Crud/crud_service/_form.html.twig') }}
+
+    <a href="{{ path('app_admin_services') }}">back to list</a>
+    </div>
+{% endblock %}

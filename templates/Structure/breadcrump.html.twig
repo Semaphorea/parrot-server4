@@ -1,0 +1,23 @@
+ {% block breadcrumb %}  
+                         {% if page is defined %}
+                        <nav id="navbreadcrumb" class="my-2"  >  
+                                
+                                <ul  class="breadcrump">  
+                                        {% if page == "accueil" %}
+                                             <li class='breadcrumb-item' >
+                                                <a href="{{ page }}"> {{ page   | capitalize }} </a>
+                                             </li>
+            
+                                        {% else %}      
+                                              <li class='breadcrumb-item divider' >
+                                                <a href="/Accueil">Accueil</a>
+                                              </li>   
+                                              <li class='breadcrumb-item '>                                              
+                                                <a href="{{ page}}">{{ page  | capitalize }}</a>
+                                            </li>
+                                        {% endif%}
+                               </ul>
+                        </nav>    
+
+                        {% endif %}
+           {% endblock breadcrumb %}   

@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administrator{% endblock %}
+
+{% block body %}
+<div class="maincontainer {{page}}">
+    <h1>Administrator</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ administrator.id }}</td>
+            </tr>
+            <tr>
+                <th>Lastname</th>
+                <td>{{ administrator.lastname }}</td>
+            </tr>
+            <tr>
+                <th>Firstname</th>
+                <td>{{ administrator.firstname }}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>{{ administrator.genre }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ administrator.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_administration') }}">back to list</a>
+
+    <a href="{{ path('app_crud_administrator_edit', {'id': administrator.id}) }}">edit</a>
+
+    {{ include('Crud/crud_administrator/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

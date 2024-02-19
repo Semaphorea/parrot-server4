@@ -1,0 +1,79 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+    app_title_website: "Garage Parrot"  
+    app_list_page: ["accueil","horaires","services","vehicules","avis","administration","credits"]    
+    app_photo_directory: "%kernel.project_dir%/images/Photo"  
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+
+    
+    
+    App\Form\ServiceType:
+        autowire: true    
+        tags: ['form.type']
+        arguments: ['@doctrine.orm.entity_manager']     
+
+    #Essai du 8/02/2024  
+    App\Controller\CrudAdministratorController:  
+        autowire: true   
+        tags: ['controller'] 
+        arguments: ['@doctrine.orm.entity_manager']    
+
+    App\Controller\CrudEmployeeController:  
+        autowire: true   
+        tags: ['controller'] 
+        arguments: [ '@Symfony\Component\Mailer\MailerInterface', '@doctrine.orm.entity_manager','@Symfony\Component\Routing\Generator\UrlGeneratorInterface']      
+   
+    App\Services\ApiService:  
+        autowire: true
+        #Arguments provided in the constructor  
+
+        arguments:
+            - '@http_client' 
+         # this is a reference to a service called 'logger'
+            - '@logger'
+
+            # if the value of a string argument starts with '@', you need to escape
+            # it by adding another '@' so Symfony doesn't consider it a service
+            # the following example would be parsed as the string '@securepassword'
+            # - '@@securepassword'
+  
+    App\Services\fileUploader:  
+        autowire: true
+        arguments: 
+            $targetDirectory: '%env(PHOTO_DIRECTORY)%'   
+             
+  
+    App\Services\LogService:          
+        autowire: true  
+
+
+    Symfony\Component\HttpFoundation\Request:   
+
+    Symfony\Component\Console\Output\OutputInterface:  
+
+
+    
+  
+
+  

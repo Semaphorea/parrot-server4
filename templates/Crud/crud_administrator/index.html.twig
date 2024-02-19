@@ -1,0 +1,42 @@
+
+
+
+{% block body %}
+<div class="maincontainer {{page}}">
+    <h1>Administrator index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>Genre</th>
+                <th>Email</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for administrator in administrators %}
+            <tr>
+                <td>{{ administrator.id }}</td>
+                <td>{{ administrator.lastname }}</td>
+                <td>{{ administrator.firstname }}</td>
+                <td>{{ administrator.genre }}</td>  
+                <td>{{ administrator.email }}</td>
+                <td>
+                    <a href="{{ path('app_crud_administrator_show', {'id': administrator.id}) }}">show</a>  
+                    <a href="{{ path('app_crud_administrator_edit', {'id': administrator.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_crud_administrator_new') }}">Create new</a>
+    </div>
+{% endblock %}

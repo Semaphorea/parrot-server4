@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Visitor{% endblock %}
+
+{% block body %}
+<div class="maincontainer {{page}}">
+    <h1>Create new Visitor</h1>
+
+    {{ include(Crud/crud_visitor/_form.html.twig') }}
+
+    <a href="{{ path('app_admin_visitor') }}">back to list</a>
+    </div>
+{% endblock %}

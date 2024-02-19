@@ -1,0 +1,41 @@
+
+
+{% block title %}Visitor index{% endblock %}
+
+{% block body %}
+<div class="maincontainer {{page}}">
+    <h1>Visitor index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>Email</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for visitor in visitors %}
+            <tr>
+                <td>{{ visitor.id }}</td>
+                <td>{{ visitor.lastname }}</td>
+                <td>{{ visitor.firstname }}</td>
+                <td>{{ visitor.email }}</td>
+                <td>
+                    <a href="{{ path('app_admin_visitor', {'id': visitor.id}) }}">show</a>
+                    <a href="{{ path('app_crud_visitor_edit', {'id': visitor.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td> 
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_crud_visitor_new') }}">Create new</a>
+    </div>
+{% endblock %}

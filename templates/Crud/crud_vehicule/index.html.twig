@@ -1,0 +1,55 @@
+
+
+
+{% block body %}
+<div class="maincontainer {{page}}">
+    <h1>Vehicule index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Features</th>
+                <th>Year</th>
+                <th>Kilometers</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>actions</th>
+            </tr>
+        </thead>  
+        <tbody>
+        {% for vehicule in vehicules %}
+          {% set featureline = '' %}  
+           {% for feature in vehicule.features %}          
+                     {% set key = feature|keys|first %}                     
+                     {% set featureline =  featureline ~ key ~ ":" ~ feature|join(', ') ~ "," %}                    
+    
+           {%  endfor %}
+
+            <tr>
+                <td>{{ vehicule.id }}</td>
+                <td>{{ vehicule.brand }}</td>
+                <td>{{ vehicule.model }}</td>
+                <td>{{ vehicule.features ?  featureline }}</td>
+                <td>{{ vehicule.year ? vehicule.year|date('Y-m-d') : '' }}</td>
+                <td>{{ vehicule.kilometers }}</td>
+                <td>{{ vehicule.type }}</td>
+                <td>{{ vehicule.price }}</td>  
+                <td>
+                    <a href="{{ path('app_admin_vehicules', {'id': vehicule.id}) }}">show</a>
+                    <a href="{{ path('app_crud_vehicule_edit', {'id': vehicule.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_crud_vehicule_new') }}">Create new</a>
+    </div>
+{% endblock %}

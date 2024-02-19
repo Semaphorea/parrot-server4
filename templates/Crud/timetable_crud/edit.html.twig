@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Timetable{% endblock %}
+
+{% block body %}
+<div class="maincontainer {{page}}">
+    <h1>Edit Timetable</h1>
+
+    {{ include('Crud/timetable_crud/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_admin_horaires') }}">back to list</a>  
+
+    {{ include('Crud/timetable_crud/_delete_form.html.twig') }}  
+    </div>
+{% endblock %}

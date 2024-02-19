@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Administrator{% endblock %}
+
+{% block body %}
+<div class="maincontainer {{page}}">
+    <h1>Create new Administrator</h1>
+
+    {{ include('Crud/crud_administrator/_form.html.twig') }}
+
+    <a href="{{ path('app_administration') }}">back to list</a>
+    </div>
+{% endblock %}
+ 

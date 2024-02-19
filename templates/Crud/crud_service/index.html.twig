@@ -1,0 +1,41 @@
+
+
+
+
+{% block body %}  
+<div class="maincontainer {{page}}">
+    <h1>Service index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Services</th>
+                <th>Date_creation</th>
+                <th>Date_modification</th>
+                <th>actions</th>
+            </tr>
+        </thead> 
+        <tbody>
+        {% for service in services %}
+            <tr>
+                <td>{{ service.id }}</td>
+                <td>{{ service.services ? service.services|join(', ') : '' }}</td>
+                <td>{{ service.dateCreation ? service.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ service.dateModification ? service.dateModification|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_crud_service_show', {'id': service.id}) }}">show</a>
+                    <a href="{{ path('app_crud_service_edit', {'id': service.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_crud_service_new') }}">Create new</a>
+    </div>
+{% endblock %}

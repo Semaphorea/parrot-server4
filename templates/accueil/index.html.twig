@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil Administration - Garage Parrot !{% endblock %}
+
+{% block body %}
+
+
+<div class="maincontainer {{page}}">
+    <h1>Vous êtes sur les pages d'administration du garage Parrot</h1>
+
+  
+
+   <ul class="admin_accueil_list">
+
+            <li> <a href="/admin/horaires"  alt="page admin horaires">Horaires</a></li>
+            <li> <a href="/admin/services"  alt="page admin services">Services</a></li>
+            <li> <a href="/admin/vehicules"  alt="page admin vehicules">Véhicules</a></li>
+            <li><a href="/admin/avis"  alt="page admin avis">Avis</a></li>
+            <li><a href="/admin/credits"  alt="page admin credits">Credits</a> </li>    
+
+   </ul>
+   
+    <section class="accueil-text">
+        <p>Message de la direction : </p>  
+        <p> L'employé du mois : Mr Sailor a doublé ses objectifs ce mois de janvier</p>
+        <p>Ses pages sont exclusivement réservées à l'usage de nos employés habilités à l'administration du site !</p>    
+    </section>
+
+
+</div>
+
+{% endblock %}

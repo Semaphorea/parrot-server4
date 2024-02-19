@@ -1,0 +1,39 @@
+
+
+
+
+{% block body %} 
+ <div class="maincontainer {{page}}">
+    <h1>Notice index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Message</th>
+                <th>Date Creation</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>  
+        {% for notice in notices %}
+            <tr>
+                <td>{{ notice.id }}</td>
+                <td>{{ notice.message }}</td>
+                <td>{{ notice.datecreation }}</td>     
+                <td>
+                    <a href="{{ path('app_admin_notice', {'id': notice.id}) }}">show</a>
+                    <a href="{{ path('app_crud_notice_edit', {'id': notice.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_crud_notice_new') }}">Create new</a>
+    </div>
+{% endblock %}
