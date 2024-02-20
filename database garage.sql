@@ -30,9 +30,64 @@ INSERT INTO Vehicule (id,brandt,model, features, year, kilometers,price) SET (9,
 INSERT INTO Vehicule (id,brandt,model, features, year, kilometers,price) SET (10,"Peugeot","3008","features[ {gear:112 },{ taxgear:6},{color:vert métallisée},{nbdoors:5},{moteur:diesel}]",2012,183750,6290);
   
 INSERT INTO Visitor ( id,lastname,firstname, email,date_creation) SET (1,"Tesla","Nicolas","n.tesla@proton.me",now());  
-INSERT INTO Visitor ( id,lastname,firstname, email,date_creation) SET (2,"Renault","Louis","l.renault@proton.me",now());
+INSERT INTO Visitor ( id,lastname,firstname, email,date_creation) SET (2,"Renault","Louis","l.renault@proton.me",now()); 
 INSERT INTO Visitor ( id,lastname,firstname, email,date_creation) SET (3,"YAZAMI","Rachid","r.yazami@proton.me",now());
 
-INSERT INTO Service (id,service,date_creation) SET (1,"",now());  
-
 INSERT INTO Photo (id,title,url,photo) SET (1,"Tesla Model S","",LOAD_FILE("c:/path/parrot-server/public/photo/garage/tesla_modelS.png")); 
+INSERT INTO Photo (id,title,url,photo) SET (1,"Citroen c8","",LOAD_FILE("c:/path/parrot-server/public/photo/garage/citroen_c8.png")); 
+INSERT INTO Photo (id,title,url,photo) SET (1,"Renault Clio","",LOAD_FILE("c:/path/parrot-server/public/photo/garage/renault_clio.png")); 
+INSERT INTO Photo (id,title,url,photo) SET (1,"Renault Scenic 3","",LOAD_FILE("c:/path/parrot-server/public/photo/garage/renault_scenic3.png")); 
+INSERT INTO Photo (id,title,url,photo) SET (1,"Peugeot e208","",LOAD_FILE("c:/path/parrot-server/public/photo/garage/peugeot_e208.png")); 
+INSERT INTO Photo (id,title,url,photo) SET (1,"Toyota Yaris","",LOAD_FILE("c:/path/parrot-server/public/photo/garage/toyota_yaris.png")); 
+INSERT INTO Photo (id,title,url,photo) SET (1,"Fiat 500 II","",LOAD_FILE("c:/path/parrot-server/public/photo/garage/fiat_500II.png")); 
+INSERT INTO Photo (id,title,url,photo) SET (1,"Volkswagen Polo","",LOAD_FILE("c:/path/parrot-server/public/photo/garage/volkswage_polo.png")); 
+INSERT INTO Photo (id,title,url,photo) SET (1,"Mini Cooper","",LOAD_FILE("c:/path/parrot-server/public/photo/garage/mini_cooper.png")); 
+INSERT INTO Photo (id,title,url,photo) SET (1,"Peugeot 3008","",LOAD_FILE("c:/path/parrot-server/public/photo/garage/peugeot_3008.png"));  
+
+INSERT INTO Service (id,service,date_creation) SET (1," {
+    "services": [
+        {
+            "carrosserie": [
+                 "retouche",
+                "tollerie",
+                "peinture"
+                
+            ]
+        },
+        {
+            "entretien de véhicule": [
+                
+                     "thermiques (Vidange,checkup)",
+                     "électriques",
+                     "nettoyage (extérieur, intérieur)",
+                     "prise en charge contrôle technique"
+               
+            ]
+        },
+        {
+            "mécanique":  ["moteur"]
+               
+        },
+        {
+            "prêt de véhicule": ["véhicule de remplacement",
+              "véhicule anciens",
+              "véhicules haut de gamme"
+              
+            ]
+        },
+        { 
+            "vente occasion": []
+        },
+        {
+            "assistance": ["intervention de dépanneuse sur autoroute"
+                
+               
+            ] 
+        },
+        { 
+            "assurance": []
+        }
+    ]
+}
+",now());  
+
