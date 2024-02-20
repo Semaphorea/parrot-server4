@@ -15,7 +15,7 @@ INSERT INTO notice ( id, message,id_visitor, note, date_creation) SET (2,"Cela f
 INSERT INTO notice ( id, message,id_visitor, note, date_creation) SET (3,"Les tarifs pratiqués correspondent à un très bon rapport qualité/prix. Nous recommandons ce garage.", 3 ,5,now());
 
 /*Feature Timetable*/ 
-INSERT INTO Timetable (id,day,timetable) SET (1,"default","timetable[{9h00},{12h00},{14h00 },{18h00]") ;     
+INSERT INTO Timetable (id,day,timetable) SET (1,"default","timetable[{9h00},{12h00},{14h00 },{18h00}]") ;     
 
 /*Feature véhicule*/ 
 INSERT INTO Vehicule (id,brandt,model, features, year, kilometers,price) SET (1,"Tesla","S","features[{gear:320 },{ taxgear:17},{color:red},{nbdoors:5},{moteur:electrique}]",2018,90000,32800);
