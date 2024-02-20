@@ -2,7 +2,7 @@ Lors de la première utilisation :
  Vous devrez créer un administrateur ayant accès et étant en mesure de modifier l'ensemble des fonctionnalités du back-end.
  Pour ce faire veuillez vous rendre sur adresseDuSite.com/admin/createadminidentifiant.
  Vous pourrez créer les identifiants et mot de passe de ce premier utilisateur.
-   
+ 
    
  
  Il vous est ensuite possible d'ajouter des employés au niveau de l'onglet administration.

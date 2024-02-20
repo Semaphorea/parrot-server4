@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Site Garage " company="" webLink="http://" view-date="2024-02-14" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.2.3230" locale="fr_FR">
+    <description/>
+    <view zooming-state="default:0" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="200" order="0"/>
+        <field id="tpd4" name="Date de début" width="75" order="1"/>
+        <field id="tpd5" name="Date de fin" width="75" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <timeline>
+            <![CDATA[14]]>
+        </timeline>
+        <option id="color.recent">
+            <![CDATA[#ff9900 #ffff99 #ff3333 #f4f4f4 #33ff00 #66ff00 #00ff00]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="2" name="Wireframe" color="#ffff99" meeting="false" start="2024-01-04" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true"/>
+        <task id="3" name="Maquette" color="#ffff99" meeting="false" start="2024-01-05" duration="4" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true"/>
+        <task id="4" name="Diagramme de classe" color="#8cb6ce" meeting="false" start="2024-01-12" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Creation du diagramme de classe]]>
+            </notes>
+        </task>
+        <task id="0" name="Front-End" meeting="false" start="2024-01-12" duration="23" complete="0" expand="true">
+            <task id="27" name="Affichage page service" color="#8cb6ce" meeting="false" start="2024-02-12" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[- récupération des données
+- modification du template]]>
+                </notes>
+            </task>
+            <task id="5" name="Creation des controleurs et templates" color="#8cb6ce" meeting="false" start="2024-01-12" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Creation des controleurs et templates
+ pour les routes : 
+      accueil
+       contact
+       mentionslegales
+       services
+       vehicules
+
+]]>
+                </notes>
+            </task>
+            <task id="28" name="Affichage page voiture occasion" color="#8cb6ce" meeting="false" start="2024-02-13" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[- récupération des données via API
+- creation de template
+]]>
+                </notes>
+            </task>
+            <task id="10" name="Modification du template" color="#8cb6ce" meeting="false" start="2024-01-15" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Modification d' élément de structure
+
+header
+nav
+footer]]>
+                </notes>
+            </task>
+            <task id="7" name="Creation de ApiService" color="#8cb6ce" meeting="false" start="2024-01-15" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Création ApiService
+
+         Classe pemettant d'interroger la récupération de données sur le serveur]]>
+                </notes>
+            </task>
+            <task id="6" name="Creation des entites" color="#8cb6ce" meeting="false" start="2024-01-15" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Vehicule
+Visitor]]>
+                </notes>
+            </task>
+            <task id="11" name="Creation du trait et service horaires" color="#8cb6ce" meeting="false" start="2024-01-15" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Ces classes permettent de récuperer les horaires de service du garage.
+Il les rend affichable en fonction des disponibilités]]>
+                </notes>
+            </task>
+        </task>
+        <task id="1" name="Back-End" color="#33ff00" meeting="false" start="2024-01-16" duration="19" complete="0" thirdDate="2024-01-16" thirdDate-constraint="1" expand="true">
+            <notes>
+                <![CDATA[Création du back-end
+	Partie Api 
+	Partie Administration]]>
+            </notes>
+            <task id="15" name="Modélisation de la base de donnée" color="#33ff00" meeting="false" start="2024-01-17" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Modélisation de la base de données
+              sous forme de fichier sql
+
+La BDD effective sera générée par la suite avec le système 
+de migration doctrine]]>
+                </notes>
+            </task>
+            <task id="13" name="Creation Api" color="#66ff00" meeting="false" start="2024-01-16" duration="7" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Modélisation de l'API
+Utilisation de platform-API
+Je n'ai pas réussi à mettre en place toutes les routes.
+
+! pb lors de php bin\console cache:clear
+-> error : cannot declare class App\Controller\avisController
+    on me dit que ce nom est déjà utilisé
+    avisController était en place dans l'arborescence windows mais plus dans       VSCode
+
+
+Passage à une API à base de contrôlers 22/01/2024
+
+Création des contrôlers
+
+26/01/2024 Mise au point routes vehicule, visitor, timetable]]>
+                </notes>
+            </task>
+            <task id="16" name="Mise en place Monolog" color="#8cb6ce" meeting="false" start="2024-01-26" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Configuration des fichiers de log
+dans var/log.dev
+
+Création d'un logService
+   avec handler et formatter Lineformatter personnalisé]]>
+                </notes>
+            </task>
+            <task id="14" name="Creation Administration" color="#ff3333" meeting="false" start="2024-01-08" duration="25" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="false">
+                <task id="17" name="Mise en place des templates" color="#ff3333" meeting="false" start="2024-01-30" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true"/>
+                <task id="19" name="Creation des fichiers Crud (controler et templates)" color="#ff3333" meeting="false" start="2024-02-05" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true"/>
+                <task id="25" name="Système d'Authentification" color="#ff3333" meeting="false" start="2024-01-08" duration="25" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="false">
+                    <task id="26" name="Formulaire de Création de Password Administrateur" color="#ff3333" meeting="false" start="2024-01-08" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true"/>
+                    <task id="22" name="Gestion création des employés" color="#ff3333" meeting="false" start="2024-02-09" duration="1" complete="0" thirdDate="2024-01-04" thirdDate-constraint="0" expand="true">
+                        <notes>
+                            <![CDATA[- Template Formulaire
+-  Envoi de mail avec lien vers endpoint sécurisé par token pour demander à l'employé de créer son mot de passe.
+]]>
+                        </notes>
+                    </task>
+                </task>
+            </task>
+        </task>
+        <task id="29" name="Envoie des fichiers vers github" color="#ff9900" meeting="false" start="2024-02-19" duration="2" complete="0" thirdDate="2024-02-05" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
