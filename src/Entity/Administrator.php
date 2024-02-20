@@ -26,9 +26,6 @@ class Administrator
     private ?string $email = null;
 
 
-    #[ORM\OneToOne(inversedBy: 'administrator', cascade: ['persist', 'remove'])]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?AuthEntity $authEntity = null;  
   
 
     public function getId(): ?int
@@ -84,15 +81,5 @@ class Administrator
         return $this;
     }
 
-    public function getAuthEntity(): ?AuthEntity
-    {
-        return $this->authEntity;
-    }
-
-    public function setAuthEntity(AuthEntity $authEntity): static
-    {
-        $this->authEntity = $authEntity;
-
-        return $this;
-    }
+   
 }

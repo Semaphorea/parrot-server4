@@ -25,6 +25,7 @@ class Employee
     #[ORM\Column(length: 128)]
     private ?string $email = null;
 
+ 
 
     public function getId(): ?int
     {
@@ -85,5 +86,20 @@ class Employee
         return $this->auhEntity;
     }
 
+    public function setAuhEntity(?AuthEntity $auhEntity): static
+    {
+        // unset the owning side of the relation if necessary
+        if ($auhEntity === null && $this->auhEntity !== null) {
+            $this->auhEntity->setEmployee(null);
+        } 
 
+        // set the owning side of the relation if necessary
+        if ($auhEntity !== null && $auhEntity->getEmployee() !== $this) {
+            $auhEntity->setEmployee($this);
+        }
+
+        $this->auhEntity = $auhEntity;
+
+        return $this;
+    }
 }

@@ -32,6 +32,9 @@ class Authentity implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'boolean')]
     private $isVerified = false;
 
+
+
+
     public function getId(): ?int
     {
         return $this->id;
